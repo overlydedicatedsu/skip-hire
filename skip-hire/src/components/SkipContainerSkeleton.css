@@ -1,0 +1,142 @@
+/* ===================================================================
+ * SKIP CONTAINER SKELETON ANIMATIONS
+ * ===================================================================
+ * Custom animations for the loading skeleton component
+ */
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes skeleton-wave {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+  animation: shimmer 2s infinite;
+  z-index: 1;
+}
+
+/* Dark theme shimmer */
+[data-theme="dark"] .skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 20%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.05) 80%,
+    transparent 100%
+  );
+}
+
+.skeleton-item {
+  background: linear-gradient(
+    90deg,
+    var(--border-muted) 0px,
+    rgba(255, 255, 255, 0.8) 40px,
+    var(--border-muted) 80px
+  );
+  background-size: 200px 100%;
+  animation: skeleton-wave 1.5s infinite ease-in-out;
+}
+
+/* Dark theme skeleton items */
+[data-theme="dark"] .skeleton-item {
+  background: linear-gradient(
+    90deg,
+    var(--border-muted) 0px,
+    rgba(255, 255, 255, 0.1) 40px,
+    var(--border-muted) 80px
+  );
+}
+
+.skeleton-pulse {
+  animation: pulse-slow 2s infinite ease-in-out;
+}
+
+/* Staggered animation delays for natural loading */
+.skeleton-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.skeleton-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.skeleton-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.skeleton-item:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.skeleton-item:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* Responsive skeleton adjustments */
+@media (max-width: 640px) {
+  .skeleton-shimmer {
+    animation-duration: 1.5s;
+  }
+  
+  .skeleton-item {
+    animation-duration: 1.2s;
+  }
+}
+
+/* Accessibility: Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-shimmer,
+  .skeleton-item,
+  .skeleton-pulse {
+    animation: none;
+  }
+  
+  .skeleton-item {
+    opacity: 0.6;
+  }
+} 

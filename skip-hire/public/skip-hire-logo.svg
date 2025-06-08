@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 60" width="180" height="60">
+  <defs>
+    <!-- Gradient for skip containers -->
+    <linearGradient id="skipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#669294;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a6a6c;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Text gradient -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#669294;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a6a6c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  
+  <!-- Main skip container - larger and centered -->
+  <g transform="translate(10, 12)">
+    <!-- Container body - bigger to fill space -->
+    <rect x="8" y="18" width="24" height="14" fill="url(#skipGradient)" stroke="#4a6a6c" stroke-width="1.2" rx="1"/>
+    
+    <!-- 3D left side -->
+    <polygon points="8,18 4,14 4,28 8,32" fill="#5a7c7e" stroke="#4a6a6c" stroke-width="0.8"/>
+    
+    <!-- 3D top -->
+    <polygon points="8,18 32,18 36,14 12,14" fill="url(#skipGradient)" stroke="#4a6a6c" stroke-width="0.8"/>
+    
+    <!-- 3D right side -->
+    <polygon points="32,18 36,14 36,28 32,32" fill="#5a7c7e" stroke="#4a6a6c" stroke-width="0.8"/>
+    
+    <!-- Simple container details -->
+    <rect x="12" y="22" width="16" height="2" fill="#4a6a6c" opacity="0.4" rx="1"/>
+    <rect x="12" y="26" width="12" height="2" fill="#4a6a6c" opacity="0.4" rx="1"/>
+  </g>
+  
+  <!-- Company name - cleaner font -->
+  <text x="70" y="28" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="url(#textGradient)">
+    Skip-Hire
+  </text>
+  
+  <!-- Simple tagline -->
+  <text x="70" y="42" font-family="Arial, sans-serif" font-size="8" fill="#7b8f67" opacity="0.7">
+    Professional Waste Solutions
+  </text>
+</svg> 

@@ -1,0 +1,29 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Skip Container 5 - Simple wide container -->
+  <defs>
+    <linearGradient id="skipGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E53E3E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FC8181;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C53030;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="sideGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#C53030;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9C2A2A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Ground line -->
+  <line x1="120" y1="250" x2="280" y2="250" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Main trapezoid container -->
+  <polygon points="140,170 260,170 280,250 120,250" fill="url(#skipGradient5)" stroke="#9C2A2A" stroke-width="2"/>
+  
+  <!-- Left side panel -->
+  <polygon points="140,170 125,155 105,235 120,250" fill="url(#sideGradient5)" stroke="#9C2A2A" stroke-width="1"/>
+  
+  <!-- Right side panel -->
+  <polygon points="260,170 275,155 295,235 280,250" fill="url(#sideGradient5)" stroke="#9C2A2A" stroke-width="1"/>
+  
+  <!-- Top edge -->
+  <polygon points="140,170 260,170 275,155 125,155" fill="url(#skipGradient5)" stroke="#9C2A2A" stroke-width="1"/>
+</svg> 
